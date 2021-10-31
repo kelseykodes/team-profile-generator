@@ -6,6 +6,7 @@ const markdown = require('./utils/generateMarkdown');
 const Choices = require('inquirer/lib/objects/choices');
 
 // Create an array of questions for each position function
+function start() {
  const start = () => {
   inquirer
     .prompt({
@@ -21,6 +22,8 @@ const Choices = require('inquirer/lib/objects/choices');
       }
     })
 };
+}
+start();
 
 function managerQs() { 
 const managerQuestions = [{
