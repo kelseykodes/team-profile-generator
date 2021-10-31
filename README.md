@@ -18,10 +18,10 @@ This webpage is desgined to help team members access contact information from ea
 - Must add Jest to "devDependencies"
 
 ## Usage
--User will be prompted for team members' name and contact information
--an HTML file is generated that displays a team roster based on user input
--When user clicks on an email address in the HTML
--user's default email program opens and with the TO field completed of the email with the address
+User will be prompted for team members' name and contact information
+Then an HTML file is generated that displays a team roster based on user input.
+When user clicks on an email address in the HTML
+user's default email program opens and with the TO field completed of the email with the address.
 -When user selects the GitHub username, that GitHub profile opens in a new tab
 -When user starts the application
 -Then user is prompted to enter the team manager’s name, employee ID, email address, and office number
