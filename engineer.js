@@ -18,11 +18,3 @@ class Engineer extends Employee {
 module.exports = Engineer;
 
 
-
-// github—GitHub username
-
-
-// getGithub()
-
-
-// getRole()—overridden to return 'Engineer'
