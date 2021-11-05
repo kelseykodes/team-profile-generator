@@ -91,19 +91,29 @@ function askUser() {
       choices: ['engineer', 'intern', 'no thanks']
     }
   ])
-}
-
-function egineer () {
-  inquirer
-  .prompt([
-  if (askUser === 'engineer') {
-  .prompt(engineerQuestions)
-  .then((answers) => {
-    const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github) 
+  .then ((answers) => {
+    if (answers === 'engineer') {
+      engineerQs();
+    }
   })
-])
 }
 
+function engineerQs () {
+  inquirer
+    .prompt(engineerQuestions)
+    .then((answers) => {
+      const engineer = new Engineer (answers.name, answers.id, answers.email, answers.github) 
+       askUser();
+    })
+}
+function internQs () {
+  inquirer
+    .prompt(internQuestions)
+    .then((answers) => {
+      const intern = new Intern (answers.name, answers.id, answers.email, answers.school) 
+       askUser();
+    })
+}
 start();
 
 // function addEmployee() {
