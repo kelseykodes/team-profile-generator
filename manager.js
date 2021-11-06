@@ -26,7 +26,10 @@ module.exports = Manager;
 
 
 
-
+// note taker:
+// set up server 
+// 2 html routes
+//2 api routes
 
 
 

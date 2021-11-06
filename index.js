@@ -4,7 +4,7 @@ const path = require('path');
 const markdown = require('./utils/generateMarkdown');
 const Choices = require('inquirer/lib/objects/choices');
 const Manager = require('./manager');
-const Employee = require('./employee'); //added this
+const Employee = require('./employee'); 
 const Engineer = require('./engineer');
 const Intern = require('./intern');
 
@@ -81,20 +81,25 @@ const start = () => {
     })
     
 }
+
 function askUser() {
   inquirer
   .prompt([
     {
       type: 'list',
       name: 'userselect',
-      message: 'Would you like add a team member?',
+      message: 'Would you like to add a team member?',
       choices: ['engineer', 'intern', 'no thanks']
     }
   ])
-  .then ((answers) => {
-    if (answers === 'engineer') {
+  .then ((choices) => {
+    if (choices.userselect === 'engineer') {
       engineerQs();
-    }
+    } else if (choices.userselect === 'intern') {
+      internQs();
+    } else {
+      return console.log('Your profile is complete!')
+  } 
   })
 }
 
@@ -106,6 +111,7 @@ function engineerQs () {
        askUser();
     })
 }
+
 function internQs () {
   inquirer
     .prompt(internQuestions)
@@ -116,92 +122,3 @@ function internQs () {
 }
 start();
 
-// function addEmployee() {
-// }
-
-// function engineerQs() {
-// }
-
-// function internQs() {
-
-// }
-
-// module.exports = Team;
-
-// .prompt(engineerQuestions)
-// .then((answers) => {
-// const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
-// })
-
-// .prompt(internQuestions) 
-// .then(answers) => {
-// const intern = new Intern(answers.name, answers.id, answers.email, answers.school)
-// })
-
-// return console.log('Your profile is complete!')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//don't know how to use swtich cases
-// switch (key) {
-//     case value:
-
-//         break;
-
-//     default:
-//         break;
-// }
-//console.log()
-
-
-// // TODO: Create a function to write README file
-
-// function writeToFile(fileName, data) {
-//   return fs.writeFileSync (path.join(process.cwd(),fileName),data);
-// }
-
-// // TODO: Create a function to initialize app
-// function init() {
-//   inquirer.prompt(question).then((responses)=> {
-//     writeToFile('readme.md', markdown({...responses}))
-//   })
-// }
-
-// // Function call to initialize app
-// init();
