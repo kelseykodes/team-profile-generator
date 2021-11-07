@@ -1,8 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
-const markdown = require('./utils/generateMarkdown');
-const Choices = require('inquirer/lib/objects/choices');
+const markdown = require('./public/generateMarkdown');
+// const Choices = require('inquirer/lib/objects/choices');
 const Manager = require('./manager');
 const Employee = require('./employee'); 
 const Engineer = require('./engineer');
@@ -98,7 +98,7 @@ function askUser() {
     } else if (choices.userselect === 'intern') {
       internQs();
     } else {
-      return console.log('Your profile is complete!')
+      return console.log('Your team profile is complete!')
   } 
   })
 }
@@ -122,3 +122,12 @@ function internQs () {
 }
 start();
 
+
+function writeToFile(object) {
+  fs.writeFile(`./public/teamIndex`, markdown.startMarkdown(object), (err) => {
+      if (err) {
+          console.log(err)
+      };
+      return
+  })
+};
