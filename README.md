@@ -10,15 +10,17 @@ This webpage is desgined to help team members access contact information from ea
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Video] (#video)
 - [Credits](#credits)
 - [License](#license)
 
 ## Installation
-- Please install package manager NPM 
-- Must add Jest to "devDependencies"
+- Please install package manager NPM by running the following command in the terminal: npm i 
+- Optional: Intsall Jest to test code. Run the following command in terminal: npm i jest
 
 ## Usage
-User will be prompted for team members' name and contact information
+User will need to run the following command in terminal to begin team profile: node index.js
+- User will be prompted for team members' name and contact information 
 - Then an HTML file is generated that displays a team roster based on user input.
 - When user clicks on an email address in the HTML
 - user's default email program opens and with the TO field completed of the email with the address.
@@ -34,13 +36,24 @@ User will be prompted for team members' name and contact information
 - When user decide to finish building their team
 - User can exit the application, and the HTML is generated based on user input
 
-
+## Video
+- <a href="https://youtu.be/1GIOQFNxriM">Video Link</a>
 
 ## Credits
-Collaborator(s): 
+Collaborator(s): Leci Reid
 
 ## License
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
 ---
+
+
+
+
+
+
+
+
+
+
