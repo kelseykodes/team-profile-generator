@@ -10,7 +10,7 @@ This webpage is desgined to help team members access contact information from ea
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Video] (#video)
+- [Video](#video)
 - [Credits](#credits)
 - [License](#license)
 
