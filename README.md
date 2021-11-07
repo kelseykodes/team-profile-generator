@@ -40,10 +40,19 @@ User will need to run the following command in terminal to begin team profile: n
 - <a href="https://youtu.be/1GIOQFNxriM">Video Link</a>
 
 ## Credits
-Collaborator(s): Leci Reid, <a href='https://youtu.be/0DLgNjBQbZk'>Git Hub</a>
+Collaborator(s): Leci Reid, <a href='https://www.youtube.com/watch?v=0DLgNjBQbZk'>Git Hub</a>
 
 ## License
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
 ---
+
+
+
+
+
+
+
+
+
