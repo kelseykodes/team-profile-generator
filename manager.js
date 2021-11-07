@@ -22,23 +22,6 @@ module.exports = Manager;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // var inquirer = require('inquirer');
 // inquirer
 //   .prompt([
