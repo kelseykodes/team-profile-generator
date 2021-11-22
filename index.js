@@ -123,8 +123,8 @@ function internQs () {
 start();
 
 
-function writeToFile(object) {
-  fs.writeFile(`./public/teamIndex`, markdown.generateMarkdown(object), (err) => {
+function writeToFile(data) {
+  fs.writeFile(`./public/teamIndex`, markdown.generateMarkdown(data), (err) => {
       if (err) {
           console.log(err)
       };
