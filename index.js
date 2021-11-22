@@ -32,17 +32,17 @@ const managerQuestions = [{
 const engineerQuestions = [{
   type: 'input',
   message: 'Hello Engineer! What is your name?',
-  name: 'name',
+  name: 'ename',
 },
 {
   type: 'input',
   message: 'What is your employee ID number?',
-  name: 'id',
+  name: 'eid',
 },
 {
   type: 'input',
   message: 'What is your email address?',
-  name: 'email',
+  name: 'eemail',
 },
 {
   type: 'input',
@@ -53,17 +53,17 @@ const engineerQuestions = [{
 const internQuestions = [{
   type: 'input',
   message: 'Hello Intern! What is your name?',
-  name: 'name',
+  name: 'iname',
 },
 {
   type: 'input',
   message: 'What is your employee ID number?',
-  name: 'id',
+  name: 'iid',
 },
 {
   type: 'input',
   message: 'What is your email address?',
-  name: 'email',
+  name: 'iemail',
 },
 {
   type: 'input',

@@ -19,13 +19,13 @@ function generateMarkdown(data) {
         <main>
         <section class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">${data.getName()}</h5>
+                    <h5 class="card-title">${data.name}</h5>
                     <p class="card-text">Team Manager</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID: ${data.getId()}</li>
-                    <li class="list-group-item">Email: <a href="mailto: ${data.getEmail()}" target="_blank">${data.getEmail()}</a></li>
-                    <li class="list-group-item">Office Number: ${data.getOfficeNumber()}</li>
+                    <li class="list-group-item">ID: ${data.id}</li>
+                    <li class="list-group-item">Email: <a href="mailto: ${data.email}" target="_blank">${data.email}</a></li>
+                    <li class="list-group-item">Office Number: ${data.officeNumber}</li>
                 </ul>
             </section>`
     };
@@ -43,19 +43,19 @@ function generateMarkdown(data) {
     function engineerMarkdown (data) {
     return `<section class="card" style="width: 18rem;">
     <div class="card-body">
-        <h5 class="card-title">Engineer: ${data.getName()}</h5>
+        <h5 class="card-title">Engineer: ${data.ename}</h5>
         <p class="card-text">Engineer</p>
     </div>
     <ul class="list-group list-group-flush">
-        <li class="list-group-item"> ID: ${data.getId()}</li>
+        <li class="list-group-item"> ID: ${data.eid}</li>
         <li class="list-group-item">
             Email:
-            <a href="mailto: ${data.getEmail()}" target="_blank">${data.getEmail()}</a>
+            <a href="mailto: ${data.eemail}" target="_blank">${data.eemail}</a>
         </li>
         </li>
         <li class="list-group-item">
             Github:
-            <a href="https://github.com/${data.getGithub()}" target="_blank">${data.getGithub()}</a>
+            <a href="https://github.com/${data.github}" target="_blank">${data.github}</a>
         </li>
     </ul>
     </section>`
@@ -64,16 +64,16 @@ function generateMarkdown(data) {
     function internMarkdown (data) {
         return  `<section class="card" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">${data.getName()}</h5>
+            <h5 class="card-title">${data.iname}</h5>
             <p class="card-text">Intern</p>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item"> ID: ${data.getId()}</li>
+            <li class="list-group-item"> ID: ${data.iid}</li>
             <li class="list-group-item">
                 Email:
-                <a href="mailto: ${data.getEmail()}" target="_blank"> ${data.getEmail()}</a>
+                <a href="mailto: ${data.iemail}" target="_blank"> ${data.iemail}</a>
             </li>
-            <li class="list-group-item">School: ${data.getSchool()}</li>
+            <li class="list-group-item">School: ${data.school}</li>
         </ul>
     </section>`
     
