@@ -4,7 +4,7 @@ const path = require('path');
 const markdown = require('./public/generateMarkdown');
 // const Choices = require('inquirer/lib/objects/choices');
 const Manager = require('./manager');
-const Employee = require('./employee'); 
+// const Employee = require('./employee'); 
 const Engineer = require('./engineer');
 const Intern = require('./intern');
 
@@ -131,3 +131,7 @@ function writeToFile(object) {
       return
   })
 };
+
+//set up server 
+//2 html routes
+//2 api routes , one post, one get

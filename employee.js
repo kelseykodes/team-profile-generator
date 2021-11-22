@@ -18,7 +18,7 @@ class Employee {
     }
 
     getRole() {
-        return ''; //is this correct?
+        return ''; 
     
     }
   }
