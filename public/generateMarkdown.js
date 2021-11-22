@@ -1,4 +1,4 @@
-function startMarkdown(object) {
+function generateMarkdown(data) {
     return `<!DOCTYPE html>
     <html>
     <head>
@@ -18,18 +18,18 @@ function startMarkdown(object) {
         <main>
         <section class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">${object.getName()}</h5>
+                    <h5 class="card-title">${data.getName()}</h5>
                     <p class="card-text">Team Manager</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID: ${object.getId()}</li>
-                    <li class="list-group-item">Email: <a href="mailto: ${object.getEmail()}" target="_blank">${object.getEmail()}</a></li>
-                    <li class="list-group-item">Office Number: ${object.getOffNum()}</li>
+                    <li class="list-group-item">ID: ${data.getId()}</li>
+                    <li class="list-group-item">Email: <a href="mailto: ${data.getEmail()}" target="_blank">${data.getEmail()}</a></li>
+                    <li class="list-group-item">Office Number: ${data.getOfficeNumber()}</li>
                 </ul>
             </section>`
     };
     
-    function endMarkdown () {
+    function stopMarkdown () {
         return `</main>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
@@ -39,40 +39,40 @@ function startMarkdown(object) {
     };
     
     
-    function engMarkdown (object) {
+    function engineerMarkdown (data) {
     return `<section class="card" style="width: 18rem;">
     <div class="card-body">
-        <h5 class="card-title">${object.getName()}</h5>
+        <h5 class="card-title">${data.getName()}</h5>
         <p class="card-text">Engineer</p>
     </div>
     <ul class="list-group list-group-flush">
-        <li class="list-group-item"> ID: ${object.getId()}</li>
+        <li class="list-group-item"> ID: ${data.getId()}</li>
         <li class="list-group-item">
             Email:
-            <a href="mailto: ${object.getEmail()}" target="_blank">${object.getEmail()}</a>
+            <a href="mailto: ${data.getEmail()}" target="_blank">${data.getEmail()}</a>
         </li>
         </li>
         <li class="list-group-item">
             Github:
-            <a href="https://github.com/${object.getGithub()}" target="_blank">${object.getGithub()}</a>
+            <a href="https://github.com/${data.getGithub()}" target="_blank">${data.getGithub()}</a>
         </li>
     </ul>
     </section>`
     }
     
-    function intMarkdown (object) {
+    function internMarkdown (data) {
         return  `<section class="card" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">${object.getName()}</h5>
+            <h5 class="card-title">${data.getName()}</h5>
             <p class="card-text">Intern</p>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item"> ID: ${object.getId()}</li>
+            <li class="list-group-item"> ID: ${data.getId()}</li>
             <li class="list-group-item">
                 Email:
-                <a href="mailto: ${object.getEmail()}" target="_blank"> ${object.getEmail()}</a>
+                <a href="mailto: ${data.getEmail()}" target="_blank"> ${data.getEmail()}</a>
             </li>
-            <li class="list-group-item">School: ${object.getSchool()}</li>
+            <li class="list-group-item">School: ${data.getSchool()}</li>
         </ul>
     </section>`
     
