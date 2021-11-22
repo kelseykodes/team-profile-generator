@@ -1,17 +1,15 @@
 /* HTML/CSS LAYOUT IS CREDIT TO https://github.com/Leci1259 */
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #fff;
+    background-color: rgb(167, 231, 250);
     background-image: url(../public/bgimg.jpg)
     linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-    linear-gradient(#eee .1em, transparent .1em);
-    background-size: 100% 1.2em;
  }
 
  header {
      height: 10rem;
      width: 100%;
-     background-color: rgb(245, 59, 59);
+     background-color: rgb(243, 78, 78);
     
  }
 
