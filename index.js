@@ -70,7 +70,7 @@ const internQuestions = [{
   message: 'Please enter your school',
   name: 'school',
 }];
-// Create an array of questions for each position function
+
 
 const start = () => {
   inquirer
@@ -124,14 +124,10 @@ start();
 
 
 function writeToFile(object) {
-  fs.writeFile(`./public/teamIndex`, markdown.startMarkdown(object), (err) => {
+  fs.writeFile(`./public/teamIndex`, markdown.generateMarkdown(object), (err) => {
       if (err) {
           console.log(err)
       };
       return
   })
 };
-
-//set up server 
-//2 html routes
-//2 api routes , one post, one get
