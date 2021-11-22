@@ -1,3 +1,4 @@
+// HTML LAYOUT CREDIT TO https://github.com/Leci1259
 function generateMarkdown(data) {
     return `<!DOCTYPE html>
     <html>
@@ -42,7 +43,7 @@ function generateMarkdown(data) {
     function engineerMarkdown (data) {
     return `<section class="card" style="width: 18rem;">
     <div class="card-body">
-        <h5 class="card-title">${data.getName()}</h5>
+        <h5 class="card-title">Engineer: ${data.getName()}</h5>
         <p class="card-text">Engineer</p>
     </div>
     <ul class="list-group list-group-flush">
@@ -78,8 +79,8 @@ function generateMarkdown(data) {
     
     }
     module.exports = {
-        startMarkdown,
-        endMarkdown,
-        engMarkdown,
-        intMarkdown
+        generateMarkdown,
+        stopMarkdown,
+        engineerMarkdown,
+        internMarkdown
      }
