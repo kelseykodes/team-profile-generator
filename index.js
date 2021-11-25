@@ -81,7 +81,7 @@ const start = () => {
     })
     
 }
-
+start();
 function askUser() {
   inquirer
   .prompt([
@@ -132,6 +132,5 @@ function begin() {
     writeToFile('teamIndex.html', markdown({...responses}))
   })
 }
-begin();
 
-start();
+begin();

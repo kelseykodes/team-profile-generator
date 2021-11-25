@@ -64,4 +64,4 @@ function generateMarkdown(data) {
         engineerMarkdown,
         internMarkdown,
         stopMarkdown
-     }
+     };
