@@ -120,14 +120,18 @@ function internQs () {
        askUser();
     })
 }
-start();
 
 
-function writeToFile(data) {
-  fs.writeFile(`./public/teamIndex`, markdown.generateMarkdown(data), (err) => {
-      if (err) {
-          console.log(err)
-      };
-      return
+//function to write html file
+function writeToFile(fileName, data) {
+  return fs.writeFileSync (path.join(process.cwd(),fileName),data);
+}
+//function to initialize app
+function begin() {
+  inquirer.prompt(questions).then((responses)=> {
+    writeToFile('teamIndex.html', markdown({...responses}))
   })
-};
+}
+begin();
+
+start();

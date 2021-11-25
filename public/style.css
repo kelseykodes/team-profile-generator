@@ -1,21 +1,16 @@
-/* HTML/CSS LAYOUT IS CREDIT TO https://github.com/Leci1259 */
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(167, 231, 250);
-    background-image: url(../public/bgimg.jpg)
-    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(116, 255, 146);
  }
 
  header {
-     height: 10rem;
+     height: 12rem;
      width: 100%;
-     background-color: rgb(243, 78, 78);
-    
  }
 
  h1{
     text-align: center;
-    color: white;
+    color: rgb(19, 21, 158);
     font-size: 8rem;  
     font-weight: bold;
  }
@@ -25,15 +20,16 @@ body {
      flex-direction: row;
      flex-wrap: wrap;
      justify-content: space-evenly;
-     margin-top: 5%;
- }
-
- .card {
-background: linear-gradient(90deg, rgb(218, 78, 101) 16%, rgba(37,150,190,1) 52%, rgba(162,225,247,1) 90%);
+     margin-top: 3%;
  }
 
  .card p:hover{
-    color:white;
+    color:rgb(219, 19, 29);
+     text-shadow: 0 0 10px #be2525;
+ }
+
+ .a :hover{
+    color:rgb(219, 19, 29);
      text-shadow: 0 0 10px #2596be;
  }
 
@@ -41,6 +37,7 @@ background: linear-gradient(90deg, rgb(218, 78, 101) 16%, rgba(37,150,190,1) 52%
      padding: 5%;
  }
 
- h5 {
+ h6 {
      font-weight: bold;
+     color: rgb(122, 19, 19);
  }

@@ -1,78 +1,48 @@
-<!-- HTML LAYOUT IS FROM https://github.com/Leci1259-->
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;700&display=swap" rel="stylesheet">
-
     <title>Team Profile Generator</title>
 </head>
 
 <body>
 
     <header>
-        <h1> Team Profile</h1>
+        <h1> Your Team!</h1>
     </header>
 
     <main>
-    <section class="card" style="width: 18rem;">
-
+        <div class="card" style="width: 18rem;">
+            <img src="./bgimg.jpg" class="card-img-top" alt="manager">
             <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text">Manager</p>
+                <h6 class="card-subtitle mb-2 text-muted"><strong>Manager: </strong></h6>
+                <p class="card-text">ID:</p>
+                <p class="card-text">Office Number:</p>
+                <a href="mailto: placeholder@gmail.com" class="card-link">Email:</a>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID:</li>
-                <li class="list-group-item">Email:<a href="mailto: placeholder@gmail.com" target="_blank"></a></li>
-                <li class="list-group-item">Office Number:</li>
-            </ul>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="./bgimg.jpg" class="card-img-top" alt="engineer">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted"><strong>Engineer: </strong></h6>
+                <p class="card-text">ID:</p>
+                <a href="https://github.com/" class="card-link">My Github</a>
+                <a href="mailto: placeholder@gmail.com" class="card-link">Email</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="./bgimg.jpg" class="card-img-top" alt="intern">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted"><strong>Intern: </strong></h6>
+                <p class="card-text">ID:</p>
+                <p class="card-text">School: </p>
+                <a href="mailto: placeholder@gmail.com" class="card-link">Email</a>
+            </div>
+        </div>
 
-</section><section class="card" style="width: 18rem;">
-
-<div class="card-body">
-    <h5 class="card-title"></h5>
-    <p class="card-text">Engineer</p>
-</div>
-<ul class="list-group list-group-flush">
-    <li class="list-group-item">ID: </li>
-    <li class="list-group-item">
-        My Email:
-        <a href="mailto: placeholder@gmail.com" target="_blank"></a>
-    </li>
-    </li>
-    <li class="list-group-item">
-        My Github:
-        <a href="https://github.com" target="_blank"></a>
-    </li>
-
-</ul>
-
-
-</section><section class="card" style="width: 18rem;">
-
-    <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">Intern</p>
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item"> ID: #</li>
-        <li class="list-group-item">
-            Email:
-            <a href="mailto: placeholder@gmail.com" target="_blank"> </a>
-        </li>
-        <li class="list-group-item">School:</li>
-    </ul>
-
-</main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </main>
 </body>
-
 </html>
