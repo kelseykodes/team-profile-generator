@@ -109,7 +109,11 @@ function engineerQs () {
     .prompt(engineerQuestions)
     .then((answers) => {
       const engineer = new Engineer (answers.name, answers.id, answers.email, answers.github) 
-      fs.appendFile('teamIndex.html',engineerMarkdown(engineer))
+      fs.appendFile('teamIndex.html',engineerMarkdown(engineer),(err) => { 
+        if (err) { 
+          console.log(err); 
+        } 
+      })
        askUser();
     })
 }
@@ -119,16 +123,20 @@ function internQs () {
     .prompt(internQuestions)
     .then((answers) => {
       const intern = new Intern (answers.name, answers.id, answers.email, answers.school) 
-      fs.appendFile('teamIndex.html',internMarkdown(intern))
+      fs.appendFile('teamIndex.html',internMarkdown(intern), (err) => { 
+        if (err) { 
+          console.log(err); 
+        } 
+      })
        askUser();
     })
 }
 
 
 //function to write html file
-function writeToFile(fileName, data) {
-  return fs.writeFileSync (path.join(process.cwd(),fileName),data);
-}
+// function writeToFile(fileName, data) {
+//   return fs.writeFileSync (path.join(process.cwd(),fileName),data);
+// }
 
 //function to initialize app
 // function begin() {
