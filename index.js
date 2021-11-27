@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
-const markdown = require('./public/generateMarkdown');
+const {generateMarkdown, engineerMarkdown, internMarkdown,stopMarkdown} = require('./public/generateMarkdown');
 // const Choices = require('inquirer/lib/objects/choices');
 const Manager = require('./manager');
 // const Employee = require('./employee'); 
@@ -71,17 +71,17 @@ const internQuestions = [{
   name: 'school',
 }];
 
-
 const start = () => {
   inquirer
     .prompt(managerQuestions)
     .then((answers) => {
       const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber)
+      fs.writeFileSync('teamIndex.html',generateMarkdown(manager))
        askUser();
-    })
-    
+    })  
 }
 start();
+
 function askUser() {
   inquirer
   .prompt([
@@ -98,6 +98,7 @@ function askUser() {
     } else if (choices.userselect === 'intern') {
       internQs();
     } else {
+      fs.writeFileSync('teamIndex.html',stopMarkdown())
       return console.log('Your team profile is complete!')
   } 
   })
@@ -108,6 +109,7 @@ function engineerQs () {
     .prompt(engineerQuestions)
     .then((answers) => {
       const engineer = new Engineer (answers.name, answers.id, answers.email, answers.github) 
+      fs.appendFile('teamIndex.html',engineerMarkdown(engineer))
        askUser();
     })
 }
@@ -117,6 +119,7 @@ function internQs () {
     .prompt(internQuestions)
     .then((answers) => {
       const intern = new Intern (answers.name, answers.id, answers.email, answers.school) 
+      fs.appendFile('teamIndex.html',internMarkdown(intern))
        askUser();
     })
 }
@@ -126,11 +129,11 @@ function internQs () {
 function writeToFile(fileName, data) {
   return fs.writeFileSync (path.join(process.cwd(),fileName),data);
 }
-//function to initialize app
-function begin() {
-  inquirer.prompt(questions).then((responses)=> {
-    writeToFile('teamIndex.html', markdown({...responses}))
-  })
-}
 
-begin();
+//function to initialize app
+// function begin() {
+//   inquirer.prompt().then((answers)=> {
+//     fs.appendFile('teamIndex.html', markdown({...answers}))
+//   })
+// }
+// begin();

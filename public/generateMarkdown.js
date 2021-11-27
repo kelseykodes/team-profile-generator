@@ -33,10 +33,10 @@ function generateMarkdown(data) {
     <div class="card" style="width: 18rem;">
             <img src="./bgimg.jpg" class="card-img-top" alt="engineer">
             <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted"><strong>Engineer:${data.ename}</strong></h6>
-                <p class="card-text">ID:${data.eid}</p>
+                <h6 class="card-subtitle mb-2 text-muted"><strong>Engineer:${data.name}</strong></h6>
+                <p class="card-text">ID:${data.id}</p>
                 <a href="https://github.com/${data.github}" class="card-link">My Github${data.github}</a>
-                <a href="mailto:${data.eemail}" class="card-link">Email${data.eemail}</a>
+                <a href="mailto:${data.eemail}" class="card-link">Email${data.email}</a>
             </div>
         </div>`
     }
@@ -45,10 +45,10 @@ function generateMarkdown(data) {
         return  `<div class="card" style="width: 18rem;">
         <img src="./bgimg.jpg" class="card-img-top" alt="intern">
         <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-muted"><strong>Intern:${data.iname} </strong></h6>
-            <p class="card-text">ID: ${data.iid}</p>
+            <h6 class="card-subtitle mb-2 text-muted"><strong>Intern:${data.name} </strong></h6>
+            <p class="card-text">ID: ${data.id}</p>
             <p class="card-text">School:${data.school}</p>
-            <a href="mailto:${data.iemail}" class="card-link">Email${data.iemail}</a>
+            <a href="mailto:${data.email}" class="card-link">Email${data.email}</a>
         </div>
     </div>`
     }
