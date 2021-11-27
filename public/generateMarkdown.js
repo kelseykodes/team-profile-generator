@@ -1,4 +1,3 @@
-// HTML LAYOUT CREDIT TO https://github.com/Leci1259
 function generateMarkdown(data) {
     return `<!DOCTYPE html>
     <html>
