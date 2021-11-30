@@ -14,6 +14,6 @@ test("role method to render engineer", () => {
 
 test("github method to render username", () => {
   const testGithub = "kelseykodes";
-  const employee = new Engineer("Foo", 1, "test@test.com", testGithub);
+  const employee = new Engineer("testName", 1, "test@email.com", testGithub);
   expect(employee.getGithub()).toEqual(testGithub);
 });
