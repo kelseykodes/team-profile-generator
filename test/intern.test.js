@@ -1,8 +1,8 @@
 const Intern = require("../intern");
 
 test("render intern school", () => {
-    const testSchool = "Georgia Tech";
-    const intern = new Intern("testName", testSchool);
+    const testSchool = "Georgia State";
+    const intern = new Intern("testName", 1, "test@email.com", testSchool);
     expect(intern.school).toEqual(testSchool);
 });
 
@@ -14,6 +14,6 @@ test("role method will return 'intern'", () => {
 
 test("school method will return intern's school", () => {
     const testSchool = "Georgia Tech";
-    const intern = new Intern("testName", 1, "test@test.com", testSchool);
+    const intern = new Intern("testName", 1, "test@email.com", testSchool);
     expect(intern.getSchool()).toEqual(testSchool);
 });

@@ -1,14 +1,15 @@
 const Engineer = require("../engineer");
 
 test("render github account", () => {
-  const testAccount = "GitHubUser";
-  const res = new Engineer(testAccount);
-  expect(res.github).toEqual(testAccount);
+  const testAccount = "kelseykodes";
+  const engineer = new Engineer("testName", 3, "test@email.com", testAccount);
+  expect(engineer.github).toBe(testAccount);
 });
+ 
 
-test("role method to render engineer", () => {
+test("role method to render 'engineer'", () => {
   const role = "Engineer";
-  const employee = new Engineer( "testName", 1, "test@email.com", "kelsseykodes");
+  const employee = new Engineer( "testName", 1, "test@email.com", "kelseykodes");
   expect(employee.getRole()).toEqual(role);
 });
 

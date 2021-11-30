@@ -1,19 +1,18 @@
 const Manager = require("../manager");
-const Employee = require("../employee");
 
 test("render manager office number", () => {
-  const testOfficeNum = "01";
-  const manager = new Manager(testOfficeNum);
-  expect(manager.testOfficeNum).toEqual(testOfficeNum);
+  const testOfficeNum = 911;
+  const manager = new Manager("testName", 3, "test@email.com", testOfficeNum);
+  expect(manager.officeNumber).toEqual(testOfficeNum);
 });
 
 test("role method to render 'manager'", () => {
-  const role = "manager";
-  const manager = new Manager("testName", 1, "test@test.com", 100);
+  const role = "Manager";
+  const manager = new Manager("testName", 1, "test@email.com");
   expect(manager.getRole()).toEqual(role);
 });
 
 test("office method to render manager's office number", () => {
   const manager = new Manager("testName", 1, "test@email.com");
-  expect(testId.getId()).toEqual(expect.any(Number));
+  expect(manager.getId()).toEqual(expect.any(Number));
 });
