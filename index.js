@@ -32,17 +32,17 @@ const managerQuestions = [{
 const engineerQuestions = [{
   type: 'input',
   message: 'Hello Engineer! What is your name?',
-  name: 'ename',
+  name: 'name',
 },
 {
   type: 'input',
   message: 'What is your employee ID number?',
-  name: 'eid',
+  name: 'id',
 },
 {
   type: 'input',
   message: 'What is your email address?',
-  name: 'eemail',
+  name: 'email',
 },
 {
   type: 'input',
@@ -53,17 +53,17 @@ const engineerQuestions = [{
 const internQuestions = [{
   type: 'input',
   message: 'Hello Intern! What is your name?',
-  name: 'iname',
+  name: 'name',
 },
 {
   type: 'input',
   message: 'What is your employee ID number?',
-  name: 'iid',
+  name: 'id',
 },
 {
   type: 'input',
   message: 'What is your email address?',
-  name: 'iemail',
+  name: 'email',
 },
 {
   type: 'input',
@@ -76,7 +76,7 @@ const start = () => {
     .prompt(managerQuestions)
     .then((answers) => {
       const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber)
-      fs.writeFileSync('teamIndex.html',generateMarkdown(manager))
+      fs.appendFileSync('./public/index.html',generateMarkdown(manager))
        askUser();
     })  
 }
@@ -98,7 +98,7 @@ function askUser() {
     } else if (choices.userselect === 'intern') {
       internQs();
     } else {
-      fs.writeFileSync('teamIndex.html',stopMarkdown())
+      fs.appendFileSync('./public/index.html',stopMarkdown())
       return console.log('Your team profile is complete!')
   } 
   })
@@ -109,7 +109,7 @@ function engineerQs () {
     .prompt(engineerQuestions)
     .then((answers) => {
       const engineer = new Engineer (answers.name, answers.id, answers.email, answers.github) 
-      fs.appendFile('teamIndex.html',engineerMarkdown(engineer),(err) => { 
+      fs.appendFileSync('./public/index.html',engineerMarkdown(engineer),(err) => { 
         if (err) { 
           console.log(err); 
         } 
@@ -123,7 +123,7 @@ function internQs () {
     .prompt(internQuestions)
     .then((answers) => {
       const intern = new Intern (answers.name, answers.id, answers.email, answers.school) 
-      fs.appendFile('teamIndex.html',internMarkdown(intern), (err) => { 
+      fs.appendFileSync('./public/index.html',internMarkdown(intern), (err) => { 
         if (err) { 
           console.log(err); 
         } 
@@ -131,17 +131,3 @@ function internQs () {
        askUser();
     })
 }
-
-
-//function to write html file
-// function writeToFile(fileName, data) {
-//   return fs.writeFileSync (path.join(process.cwd(),fileName),data);
-// }
-
-//function to initialize app
-// function begin() {
-//   inquirer.prompt().then((answers)=> {
-//     fs.appendFile('teamIndex.html', markdown({...answers}))
-//   })
-// }
-// begin();
