@@ -2,7 +2,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
 const {generateMarkdown, engineerMarkdown, internMarkdown,stopMarkdown} = require('./public/generateMarkdown');
-// const Choices = require('inquirer/lib/objects/choices');
 const Manager = require('./manager');
 // const Employee = require('./employee'); 
 const Engineer = require('./engineer');
